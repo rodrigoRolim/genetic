@@ -21,14 +21,15 @@ class Reproduction:
 
     return positions
   
-  def defining_crossover_pair(self, n):
+  def defining_engageds(self, n):
     positions = self.generate_random_numbers(n)
-    pairs = []
+    engageds = []
 
     i = 0
     while(i < len(positions)):
       
-      pairs.append([positions[i], positions[i + 1]])
+      engageds.append([positions[i], positions[i + 1]])
       i = i + 2
-      
-    return pairs
+
+    return engageds
+  
