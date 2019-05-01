@@ -45,3 +45,11 @@ class Selection:
 
     return positions
 
+  def get_new_population(self, fitnessList, n, oldPopulation):
+    positions = self.run_roulette(fitnessList, n)
+    newPopulation = []
+    for position in positions:
+      newPopulation.append(oldPopulation[position])
+    
+    return newPopulation
+
