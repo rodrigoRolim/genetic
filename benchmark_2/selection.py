@@ -18,7 +18,7 @@ class Selection:
 
   def acumulated_probabilities(self):
     
-    for i in range(self.probabilities):
+    for i in range(len(self.probabilities)):
       sumProbs = 0
       for j in range(i, -1, -1):
         sumProbs = self.probabilities[j] + sumProbs
@@ -28,10 +28,10 @@ class Selection:
     # n é o tamanho da população
     # gerar número aleatórios de 0 a 1
     for i in range(n):
-      randomNumbers.append(round(random.uniform(-1, 1), 3))
+      self.randomNumbers.append(round(random.uniform(-1, 1), 3))
 
   def run_roulette(self, fitnessList, n):
-    indexs = []
+    positions = []
     
     self.calcule_probabilities(fitnessList)
     self.acumulated_probabilities()
@@ -40,8 +40,8 @@ class Selection:
     for randomNumber in self.randomNumbers:
       for acumulated in self.acumulateds:
         if(acumulated >= randomNumber):
-          indexs.append(self.acumulateds.index(acumulated))
+          positions.append(self.acumulateds.index(acumulated))
           break
 
-    return indexs
+    return positions
 
