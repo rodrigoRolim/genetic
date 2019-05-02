@@ -1,4 +1,5 @@
 # Projeto de algoritmo genético
+  
 **nomes:** Marco souza, Rodrigo Rolim, Paulo nakaima
 1. funções escolhidas: f2 e f6
 2. cromossoma constituído por uma cadeia de 30 genes representados por números reais de precisão igual a 3
@@ -11,4 +12,5 @@
   * **função f6**:
     - cromossoma: [-84.028, -3.447, -60.083, 45.826, 0.291, 31.97, 58.968, 22.587, 56.898, -69.079, 29.892, 59.364, -77.349, 2.067, -41.627, -54.923, -42.859, -91.222, 26.921, -12.138, -62.263, 64.406, 97.979, -17.526, 28.477, -47.461, 53.658, 7.768, 11.476, -39.314]
     - fitness: 139.771
-   
+  
+  
