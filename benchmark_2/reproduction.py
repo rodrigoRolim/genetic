@@ -49,6 +49,13 @@ class Reproduction:
       for i in range(crossover_point, len(cromossoma_1)):
         cromossoma_1[i] = cromossoma_copy_2[i]
         cromossoma_2[i] = cromossoma_copy_1[i]
+      
+      newPopulation[engaged[0]] = cromossoma_1
+      newPopulation[engaged[1]] = cromossoma_2
+    
+    return newPopulation
+  
+
 
 
 
