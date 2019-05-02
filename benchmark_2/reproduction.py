@@ -8,7 +8,7 @@ class Reproduction:
     # n é o tamanho da população
     # gerar número aleatórios de 0 a 1
     for i in range(n):
-      randomNumbers.append(round(random.uniform(-1, 1), 3))
+      randomNumbers.append(round(random.uniform(0, 1), 3))
     return randomNumbers
   
   def selecting_individuals(self, n):
