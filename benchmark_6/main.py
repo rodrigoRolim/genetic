@@ -13,6 +13,6 @@ for gene in cromossoma:
   sm = (gene + 0.5) + sm
   
 
-fitness = 100*0.5 - sm 
+fitness = 100.5 * 30 - sm 
 print(round(fitness, 3))
 print(cromossoma)
