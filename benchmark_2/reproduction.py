@@ -22,7 +22,7 @@ class Reproduction:
     return positions
   
   def defining_engageds(self, n):
-    positions = self.generate_random_numbers(n)
+    positions = self.selecting_individuals(n)
     engageds = []
 
     i = 0
@@ -31,5 +31,28 @@ class Reproduction:
       engageds.append([positions[i], positions[i + 1]])
       i = i + 2
 
-    return engageds
+    return engageds # posiçoes da nova população para cruzar
   
+  def run_crossover(self, newPopulation, n):
+    # selecteds é a população t + 1
+    engageds = self.defining_engageds(n)
+    
+    for engaged in engageds:
+      crossover_point = random.randint(1, 29)
+      
+      cromossoma_1 = newPopulation[engaged[0]]
+      cromossoma_2 = newPopulation[engaged[1]]
+
+      cromossoma_copy_1 = cromossoma_1.copy()
+      cromossoma_copy_2 = cromossoma_2.copy()
+
+      for i in range(crossover_point, len(cromossoma_1)):
+        cromossoma_1[i] = cromossoma_copy_2[i]
+        cromossoma_2[i] = cromossoma_copy_1[i]
+
+
+
+
+
+      
+
