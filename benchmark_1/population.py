@@ -4,3 +4,4 @@ class Population:
     self.population.append(cromossoma)
   def getPopulation(self):
     return self.population
+ 
