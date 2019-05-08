@@ -2,8 +2,8 @@
 **nomes:** Marco souza, Rodrigo Rolim, Paulo nakaima
 1. funções escolhidas: f2 e f6
 2. cromossoma constituído por uma cadeia de 30 genes representados por números reais de precisão igual a 3
-3. O método de seleção aplicado será o de roleta com elitismo após a mutação
-4. crossover com Pc = 0.7 e mutação com Pm = 0.01
+3. O método de seleção aplicado será o de roleta com elitismo 
+4. crossover simples com Pc = 0.7 e mutação indutiva com Pm = 0.01
 5. 
   * **função f2**: 
     - cromossoma: [7.052, -2.641, -1.942, -4.591, -2.807, 4.946, 7.288, -3.001, -0.141, 2.789, -8.177, 9.613, -0.683, -6.01, -8.889, -7.743, -10.95, 8.874, 3.995, 4.948, -7.072, 8.472, 9.406, 8.078, -6.384, -0.048, 7.31, -7.936, -7.295, -4.237]
