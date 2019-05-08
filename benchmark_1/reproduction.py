@@ -59,7 +59,7 @@ class Reproduction:
           cromossoma_1[i] = cromossoma_copy_2[i]
           cromossoma_2[i] = cromossoma_copy_1[i]
       else:
-        for i in range(len(cromossoma_1), 0, -1):
+        for i in range(len(cromossoma_1) - 1, 0, -1):
           cromossoma_1[i] = cromossoma_copy_2[i]
           cromossoma_2[i] = cromossoma_copy_1[i]
 

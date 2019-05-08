@@ -6,9 +6,10 @@ class Selection:
   probability = 0
   acumulateds = [] #lista de probalidades acumuladas
   randomNumbers = []
+  newPopulation = []
 
   def calcule_probabilities(self, fitnessList):
-    
+    self.probabilities.clear()
     sumFitness = 0
     for fitness in fitnessList:
       sumFitness = fitness + sumFitness
@@ -17,7 +18,7 @@ class Selection:
       self.probabilities.append(self.probability)
 
   def acumulated_probabilities(self):
-    
+    self.acumulateds.clear()
     for i in range(len(self.probabilities)):
       sumProbs = 0
       for j in range(i, -1, -1):
@@ -25,6 +26,7 @@ class Selection:
       self.acumulateds.append(sumProbs)
   
   def generate_random_numbers(self, n):
+    self.randomNumbers.clear()
     # n é o tamanho da população
     # gerar número aleatórios de 0 a 1
     for i in range(n):
@@ -47,10 +49,10 @@ class Selection:
 
   def get_new_population(self, fitnessList, oldPopulation):
     positions = self.run_roulette(fitnessList)
-    newPopulation = []
+    self.newPopulation.clear()
     for position in positions:
-      newPopulation.append(oldPopulation[position])
+      self.newPopulation.append(oldPopulation[position])
     
-    return newPopulation
+    return self.newPopulation
 
   # def elitism(self, newPopulation, oldPopulation):
