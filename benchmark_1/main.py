@@ -12,15 +12,16 @@ fit = Fitness()
 reproduction = Reproduction()
 selection = Selection()
 pop = population.get_population()
-i = 1
+
 while (True):
 
   fit.set_fitness(pop.copy())
   
-  if 300000 in fit.get_fitness():
+  if 0 in fit.get_fitness():
     print(fit.get_fitness())
     print("achei")
     break
+    
   selected_population = selection.get_new_population(fit.get_fitness().copy(), pop.copy())
   new_pop = reproduction.crossover(selected_population.copy())
   mutade_pop = reproduction.mutation(new_pop.copy())
@@ -29,9 +30,4 @@ while (True):
   new_pop.clear()
   pop = mutade_pop.copy()
   mutade_pop.clear()
-  #print(pop)
   fit.empty_list_fitness()
-  i = i + 1
-
-
-  

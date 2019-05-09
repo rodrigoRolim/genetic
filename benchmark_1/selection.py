@@ -13,6 +13,7 @@ class Selection:
     sumFitness = 0
     for fitness in fitnessList:
       sumFitness = fitness + sumFitness
+  
     for fitness in fitnessList:
       self.probability = fitness/sumFitness
       self.probabilities.append(self.probability)
@@ -54,5 +55,3 @@ class Selection:
       self.newPopulation.append(oldPopulation[position])
     
     return self.newPopulation
-
-  # def elitism(self, newPopulation, oldPopulation):

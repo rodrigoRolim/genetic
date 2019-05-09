@@ -91,6 +91,3 @@ class Reproduction:
       population[point[0]][point[1]] = new_gene
     
     return population
-
-#r = Reproduction()
-#print(r.defining_engageds(9))
