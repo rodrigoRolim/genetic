@@ -1,18 +1,32 @@
-import random
-import numpy
-sm = 0
-pd = 1
-cromossoma = []
-for i in range(30):
-  gene = round(random.uniform(-101, 100), 3)
-  cromossoma.append(gene)
+from cromossoma import Cromossoma
+from population import Population
+from fitness import Fitness
+from selection import Selection
+from reproduction import Reproduction
 
+pop = []
+population = Population() 
+population.init_population()
+fit = Fitness()
+reproduction = Reproduction()
+selection = Selection()
+pop = population.get_population()
 
+while (True):
 
-for gene in cromossoma:
-  sm = (gene + 0.5) + sm
-  
-
-fitness = 100.5 * 30 - sm 
-print(round(fitness, 3))
-print(cromossoma)
+  fit.set_fitness(pop.copy())
+  print(fit.get_fitness())
+  if 0.0 in fit.get_fitness():
+    print(fit.get_fitness())
+    print("achei")
+    break
+    
+  selected_population = selection.get_new_population(fit.get_fitness().copy(), pop.copy())
+  new_pop = reproduction.crossover(selected_population.copy())
+  mutade_pop = reproduction.mutation(new_pop.copy())
+  pop.clear()
+  selected_population.clear()
+  new_pop.clear()
+  pop = mutade_pop.copy()
+  mutade_pop.clear()
+  fit.empty_list_fitness()

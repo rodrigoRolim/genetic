@@ -1,7 +1,6 @@
 import random
 import numpy as np
 import arithmetic_crossover
-
 class Reproduction:
   
   _Pc = 0.7
@@ -53,20 +52,18 @@ class Reproduction:
 
       cromossoma_copy_1 = cromossoma_1.copy()
       cromossoma_copy_2 = cromossoma_2.copy()
-
+      
       childs = arithmetic_crossover.crossover(cromossoma_copy_1, cromossoma_copy_2, 0.8)
 
       newPopulation[engaged[0]] = childs[0]
       newPopulation[engaged[1]] = childs[1]
-
-      newPopulation[engaged[0]] = cromossoma_1
-      newPopulation[engaged[1]] = cromossoma_2
     
     return newPopulation
   
   def mutation(self, population):
     row_length = len(population)
     column_length = len(population[0])
+
     mutation_points = []
     matrix_rand = np.zeros([row_length,column_length], dtype=float)
 

@@ -7,7 +7,7 @@ class Fitness:
      #print(cromossoma)
       for gene in cromossoma:
         sm = (gene**2) + sm
-      self.fitness = round(sm, 3)
+      self.fitness = round(300000.0 - sm, 3)
       self.list_fitness.append(self.fitness)
       self.fitness = 0
   def get_fitness(self):
