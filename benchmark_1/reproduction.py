@@ -81,7 +81,14 @@ class Reproduction:
     for point in mutation_points:
       
       current_gene = population[point[0]][point[1]]
-      new_gene = round(random.uniform(current_gene, 100), 3)
+      new_gene = round(random.uniform(-100, 100), 3)
+
       population[point[0]][point[1]] = new_gene
     
     return population
+  def no_uniform_mutation(self, t, gene):
+    T = random.randint(0,1)
+    if(T == 0):
+      new_gene = gene + delta(t, 100)
+  def delta(self, t, y):
+    return y*(1 - random.uniform(0,1)**(1 - t/1000))

@@ -16,13 +16,13 @@ selection = Selection()
 pop = population.get_population()
 i = 0
 
-while (i < 2):
+while (i < 1000):
   
   fit.set_fitness(pop.copy())
   fit_initial = fit.get_fitness()
   print("geraçao")
-  print(pop.copy())
-  if 300000.0 in fit.get_fitness():
+  print(min(fit.get_fitness()))
+  if 0.0 in fit.get_fitness():
     print(pop.copy())
     print(fit.get_fitness())
     print("achei")  

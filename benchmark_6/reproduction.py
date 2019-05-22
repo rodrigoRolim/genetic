@@ -3,7 +3,7 @@ import numpy as np
 import arithmetic_crossover
 class Reproduction:
   
-  _Pc = 0.7
+  _Pc = 0.8
   _Pm = 0.01
   def generate_random_numbers(self, n):
     randomNumbers = [] 
@@ -78,7 +78,7 @@ class Reproduction:
     for point in mutation_points:
       
       current_gene = population[point[0]][point[1]]
-      new_gene = round(random.uniform(current_gene, 100), 3)
+      new_gene = round(random.uniform(-100, 100), 3)
       population[point[0]][point[1]] = new_gene
     
     return population

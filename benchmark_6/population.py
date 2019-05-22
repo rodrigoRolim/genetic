@@ -4,7 +4,7 @@ class Population:
   def init_population(self):
     cromossoma = Cromossoma()
     l = 0
-    while (l <= 100):
+    while (l < 100):
       ind = cromossoma.make_cromossoma()
       self.population.append(ind.copy())
       l = 1 + l
