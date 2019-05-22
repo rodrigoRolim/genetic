@@ -4,12 +4,17 @@ class Fitness:
   def set_fitness(self, population):
     sm = 0
     for cromossoma in population:
-
+      sm = 0
+      #print(sm)
       for gene in cromossoma:
+        
+        #print(gene)
         sm += (gene + 0.5)
-      self.fitness = round(3015.0 - sm, 3)
+      
+      self.fitness = round(sm, 2)
       self.list_fitness.append(self.fitness)
       self.fitness = 0
+      
   def get_fitness(self):
     return self.list_fitness
   def empty_list_fitness(self):

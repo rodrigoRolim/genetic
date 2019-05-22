@@ -22,6 +22,7 @@ class Selection:
     self.acumulateds.clear()
     for i in range(len(self.probabilities)):
       sumProbs = 0
+
       for j in range(i, -1, -1):
         sumProbs = self.probabilities[j] + sumProbs
       self.acumulateds.append(sumProbs)
@@ -50,8 +51,11 @@ class Selection:
 
   def get_new_population(self, fitnessList, oldPopulation):
     positions = self.run_roulette(fitnessList)
+   #print(positions)
     self.newPopulation.clear()
     for position in positions:
+      #print(oldPopulation[position])
       self.newPopulation.append(oldPopulation[position])
     
     return self.newPopulation
+
