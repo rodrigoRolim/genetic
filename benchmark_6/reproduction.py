@@ -79,6 +79,6 @@ class Reproduction:
     for point in mutation_points:
       
       current_gene = population[point[0]][point[1]]
-      population[point[0]][point[1]] = current_gene * 0.3
+      population[point[0]][point[1]] = current_gene*random.uniform(-0.5,0.5)
     
     return population
