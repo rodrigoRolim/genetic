@@ -20,7 +20,7 @@ while (i < 1000):
   
   fit.set_fitness(pop.copy())
   fit_initial = fit.get_fitness()
-  print("geraçao")
+  
   print(min(fit.get_fitness()))
   if 0.0 in fit.get_fitness():
     print(pop.copy())
