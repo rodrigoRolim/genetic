@@ -23,7 +23,10 @@ while (i < 1000):
   
   print(min(fit.get_fitness()))
   if 0.0 in fit.get_fitness():
+    print("geracao:")
+    print(i)
     print(pop.copy())
+    print('fit')
     print(fit.get_fitness())
     print("achei")  
     break

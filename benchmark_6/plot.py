@@ -1,43 +1,102 @@
-import numpy as np
-import os
-import signal
-import matplotlib
 import matplotlib.pyplot as plt
+from matplotlib.figure import Figure
 
-try:
-  n = 8
-  board = Board(n)
 
-  #_board_setup_5_steps_from_solution(board)
-  exp_num = _get_experiment_number()
-  board.rand_init()
-  #_board_setup_flat(board)
+class Plot(Figure):
+    def __init__(self, *args, figtitle='hi mom', **kwargs):
+        """
+        custom kwarg figtitle is a figure title
+        """
+        super().__init__(*args, **kwargs)
+        self.text(0.5, 0.95, figtitle, ha='center')
 
-  hill_climbing = HillClimbing(board)
 
-  path = 'figures/'
-  path += str(exp_num)
-  path += '-experiment'
-  path += '.txt'
+fig = plt.figure(FigureClass=Plot, figtitle='fitness 1')
+ax = fig.subplots()
+#ax.plot([1, 2, 3])
 
-  _save_board_setup(path, hill_climbing)
-
-  line_plot = []
-
-  for h in hill_climbing.execute():
-    line_plot.append(h)
-except KeyboardInterrupt:
-    print("W: interrupt received, stopping…")
-finally:
-    n = len(line_plot)
-    x = range(1, n + 1)
-    plt.plot(x, [-x for x in line_plot])
-    plt.ylabel('heuristic')
-    plt.xlabel('state space')
-    path = 'figures/'
-    path += str(exp_num)
-    path += '-experiment'
-    plt.savefig(path)
-    path += '.txt'
-    _save_board_setup(path, hill_climbing)
-    plt.show()
+ax.plot([82595.99,
+96625.786,
+88627.106,
+122316.272,
+133231.026,
+116096.123,
+107029.616,
+100080.799,
+100077.663,
+86928.283,
+68891.579,
+63185.455,
+49575.921,
+49575.921,
+49572.324,
+43205.395,
+38129.947,
+28527.988,
+28527.987,
+28524.66,
+28457.632,
+28454.3,
+20316.879,
+20316.879,
+11318.452,
+11314.612,
+11314.611,
+11311.011,
+11311.011,
+11311.011,
+11311.009,
+11311.009,
+11311.009,
+11311.009,
+11311.009,
+11307.757,
+11307.755,
+11307.755,
+11307.755,
+11307.755,
+11307.755,
+3018.238,
+3014.923,
+3014.923,
+3014.923,
+5.629,
+5.628,
+5.627,
+5.626,
+5.625,
+5.625,
+5.625,
+5.625,
+5.624,
+4.42,
+4.42,
+4.42,
+4.42,
+4.42,
+4.42,
+4.42,
+4.42,
+4.42,
+4.42,
+4.42,
+1.872,
+1.872,
+1.872,
+1.872,
+1.872,
+1.872,
+0.002,
+0.002,
+0.002,
+0.002,
+0.002,
+0.002,
+0.002,
+0.001,
+0.001,
+0.001,
+0.001,
+0.001,
+0.0])
+plt.show()

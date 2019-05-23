@@ -4,7 +4,7 @@ import arithmetic_crossover
 
 class Reproduction:
   
-  _Pc = 0.8
+  _Pc = 0.7
   _Pm = 0.01
   def generate_random_numbers(self, n):
     randomNumbers = [] 
@@ -79,6 +79,6 @@ class Reproduction:
     for point in mutation_points:
       
       current_gene = population[point[0]][point[1]]
-      population[point[0]][point[1]] = current_gene * 0.02
+      population[point[0]][point[1]] = current_gene * 0.3
     
     return population

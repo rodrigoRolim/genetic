@@ -8,7 +8,7 @@ class Fitness:
       for gene in cromossoma:
         sm = gene**2 + sm
 
-      self.fitness = sm
+      self.fitness = round(sm, 3)
       self.list_fitness.append(self.fitness)
       self.fitness = 0
   def get_fitness(self):
