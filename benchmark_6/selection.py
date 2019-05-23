@@ -4,7 +4,7 @@ class Selection:
 
   probabilities = []
   probability = 0
-  acumulateds = [] #lista de probalidades acumuladas
+  acumulateds = [] 
   randomNumbers = []
   newPopulation = []
 
@@ -28,8 +28,7 @@ class Selection:
   
   def generate_random_numbers(self, n):
     self.randomNumbers.clear()
-    # n é o tamanho da população
-    # gerar número aleatórios de 0 a 1
+    
     for i in range(n):
       self.randomNumbers.append(round(random.uniform(-1, 1), 3))
 

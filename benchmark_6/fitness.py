@@ -5,10 +5,8 @@ class Fitness:
     sm = 0
     for cromossoma in population:
       sm = 0
-      #print(sm)
       for gene in cromossoma:
-        
-        #print(gene)
+      
         sm += (gene + 0.5)
       
       self.fitness = round(sm, 2)

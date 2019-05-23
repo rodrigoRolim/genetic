@@ -1,6 +1,7 @@
 import random
 import numpy as np
 import arithmetic_crossover
+
 class Reproduction:
   
   _Pc = 0.8
