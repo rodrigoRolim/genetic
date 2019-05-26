@@ -10,11 +10,11 @@ from matplotlib.figure import Figure
 
 fig1 = plt.figure(FigureClass=Plot, figtitle='fitness 1 (min)')
 fig2 = plt.figure(FigureClass=Plot, figtitle='fitness 1 (max)')
-# fig3 = plt.figure(FigureClass=Plot, figtitle='fitness 1 (total)')
+fig3 = plt.figure(FigureClass=Plot, figtitle='fitness 1 (total)')
 
 ax = fig1.subplots()
 ay = fig2.subplots()
-# az = fig3.subplots()
+az = fig3.subplots()
 
 min_fitness = []
 max_fitness = []
@@ -35,16 +35,18 @@ try:
     
     fit.set_fitness(pop.copy())
     fit_initial = fit.get_fitness()
+    total_fitness.extend(fit.get_fitness())
     min_fitness.append(min(fit.get_fitness()))
     max_fitness.append(max(fit.get_fitness()))
-    # total_fitness.append(fit_initial)
+
     # stop condition
     if 0.0 in fit.get_fitness():
-      print(min_fitness)
-      print(pop.copy())
-      ax.plot(min_fitness, 'r')
-      ay.plot(max_fitness)
-      # az.plot(total_fitness)
+      #print(min_fitness)
+      #print(pop.copy())
+      print(fit_initial)
+      ax.plot(min_fitness, 'g')
+      ay.plot(max_fitness, 'r')
+      az.plot(total_fitness)
       plt.show()
       print("achei")
       break

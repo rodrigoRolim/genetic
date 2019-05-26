@@ -54,7 +54,7 @@ class Reproduction:
       cromossoma_copy_1 = cromossoma_1.copy()
       cromossoma_copy_2 = cromossoma_2.copy()
 
-      childs = arithmetic_crossover.crossover(cromossoma_copy_1, cromossoma_copy_2, 0.8)
+      childs = arithmetic_crossover.crossover(cromossoma_copy_1, cromossoma_copy_2, 0.9)
 
       newPopulation[engaged[0]] = childs[0]
       newPopulation[engaged[1]] = childs[1]

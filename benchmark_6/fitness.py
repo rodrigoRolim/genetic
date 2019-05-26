@@ -7,9 +7,9 @@ class Fitness:
       sm = 0
       for gene in cromossoma:
       
-        sm += (gene + 0.5)
+        sm += abs(gene + 0.5)
       
-      self.fitness = round(sm, 2)
+      self.fitness = sm
       self.list_fitness.append(self.fitness)
       self.fitness = 0
       
