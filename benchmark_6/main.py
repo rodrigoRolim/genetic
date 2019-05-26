@@ -40,7 +40,7 @@ try:
     max_fitness.append(max(fit.get_fitness()))
 
     # stop condition
-    if 0.0 in fit.get_fitness():
+    if 0 in fit.get_fitness():
       #print(min_fitness)
       #print(pop.copy())
       print(fit_initial)

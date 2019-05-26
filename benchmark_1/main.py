@@ -8,6 +8,7 @@ from plot import Plot
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 
+
 fig1 = plt.figure(FigureClass=Plot, figtitle='fitness 1 (min)')
 fig2 = plt.figure(FigureClass=Plot, figtitle='fitness 1 (max)')
 fig3 = plt.figure(FigureClass=Plot, figtitle='fitness 1 (total)')
@@ -78,7 +79,7 @@ finally:
   print(min_fitness)
   ax.plot(min_fitness, 'r')
   ay.plot(max_fitness)
-  # az.plot(total_fitness)
+  az.plot(total_fitness)
   plt.show()
   
   

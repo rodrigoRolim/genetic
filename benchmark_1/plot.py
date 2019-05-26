@@ -3,7 +3,7 @@ from matplotlib.figure import Figure
 
 
 class Plot(Figure):
-    def __init__(self, *args, figtitle='hi mom', **kwargs):
+    def __init__(self, *args, figtitle='benchmark', **kwargs):
         """
         custom kwarg figtitle is a figure title
         """
