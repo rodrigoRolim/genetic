@@ -47,7 +47,7 @@ try:
       print(fit_initial)
       ax.plot(min_fitness, 'g')
       ay.plot(max_fitness, 'r')
-      az.plot(total_fitness)
+      az.plot(total_fitness, 'o')
       plt.show()
       print("achei")
       break

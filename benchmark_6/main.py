@@ -40,13 +40,13 @@ try:
     max_fitness.append(max(fit.get_fitness()))
 
     # stop condition
-    if 0 in fit.get_fitness():
+    if 0.0 in fit.get_fitness():
       #print(min_fitness)
       #print(pop.copy())
       print(fit_initial)
       ax.plot(min_fitness, 'g')
       ay.plot(max_fitness, 'r')
-      az.plot(total_fitness)
+      az.plot(total_fitness, 'o')
       plt.show()
       print("achei")
       break
@@ -58,13 +58,13 @@ try:
     mutade_pop = reproduction.mutation(new_pop.copy())
     fit_mutated = fit.set_fitness(mutade_pop.copy())
     fit_final = fit.get_fitness()
-    #result_pop = elitism.saveTheBest(pop.copy(), mutade_pop.copy(), fit_initial.copy(), fit_final.copy())
+    result_pop = elitism.saveTheBest(pop.copy(), mutade_pop.copy(), fit_initial.copy(), fit_final.copy())
     
     pop.clear()
     selected_population.clear()
     new_pop.clear()
     # new generation
-    pop = mutade_pop.copy()
+    pop = result_pop.copy()
     
     mutade_pop.clear()
     result_pop.clear()
@@ -78,7 +78,7 @@ finally:
   print(min_fitness)
   ax.plot(min_fitness, 'g')
   ay.plot(max_fitness, 'r')
-  az.plot(total_fitness)
+  az.plot(total_fitness, 'o')
   plt.show()
   
   
