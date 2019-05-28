@@ -4,8 +4,8 @@ import arithmetic_crossover
 
 class Reproduction:
   
-  _Pc = 0.7
-  _Pm = 0.01
+  _Pc = 0.6
+  _Pm = 0.02
   def generate_random_numbers(self, n):
     randomNumbers = [] 
     # n é o tamanho da população

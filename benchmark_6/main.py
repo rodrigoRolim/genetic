@@ -8,12 +8,12 @@ from plot import Plot
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 
-fig1 = plt.figure(FigureClass=Plot, figtitle='fitness 6 (min)')
-fig2 = plt.figure(FigureClass=Plot, figtitle='fitness 6 (max)')
+#fig1 = plt.figure(FigureClass=Plot, figtitle='fitness 6 (min)')
+#fig2 = plt.figure(FigureClass=Plot, figtitle='fitness 6 (max)')
 fig3 = plt.figure(FigureClass=Plot, figtitle='fitness 6 (total)')
 
-ax = fig1.subplots()
-ay = fig2.subplots()
+#ax = fig1.subplots()
+#ay = fig2.subplots()
 az = fig3.subplots()
 
 min_fitness = []
@@ -31,7 +31,7 @@ pop = population.get_population()
 i = 0
 
 try:
-  while (i < 200):
+  while (i < 400):
     
     fit.set_fitness(pop.copy())
     fit_initial = fit.get_fitness()
@@ -44,8 +44,8 @@ try:
       #print(min_fitness)
       #print(pop.copy())
       print(fit_initial)
-      ax.plot(min_fitness, 'g')
-      ay.plot(max_fitness, 'r')
+      #ax.plot(min_fitness, 'g')
+      #ay.plot(max_fitness, 'r')
       az.plot(total_fitness, 'o')
       plt.show()
       print("achei")
@@ -76,8 +76,8 @@ except KeyboardInterrupt:
 finally:
   print(pop.copy())
   print(min_fitness)
-  ax.plot(min_fitness, 'g')
-  ay.plot(max_fitness, 'r')
+  #ax.plot(min_fitness, 'g')
+  #ay.plot(max_fitness, 'r') """
   az.plot(total_fitness, 'o')
   plt.show()
   

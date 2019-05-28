@@ -9,12 +9,12 @@ import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 
 
-fig1 = plt.figure(FigureClass=Plot, figtitle='fitness 1 (min)')
-fig2 = plt.figure(FigureClass=Plot, figtitle='fitness 1 (max)')
+#fig1 = plt.figure(FigureClass=Plot, figtitle='fitness 1 (min)')
+#fig2 = plt.figure(FigureClass=Plot, figtitle='fitness 1 (max)')
 fig3 = plt.figure(FigureClass=Plot, figtitle='fitness 1 (total)')
 
-ax = fig1.subplots()
-ay = fig2.subplots()
+#ax = fig1.subplots()
+#ay = fig2.subplots()
 az = fig3.subplots()
 
 min_fitness = []
@@ -45,8 +45,8 @@ try:
       #print(min_fitness)
       #print(pop.copy())
       print(fit_initial)
-      ax.plot(min_fitness, 'g')
-      ay.plot(max_fitness, 'r')
+      #ax.plot(min_fitness, 'g')
+      #ay.plot(max_fitness, 'r')
       az.plot(total_fitness, 'o')
       plt.show()
       print("achei")
@@ -77,8 +77,8 @@ except KeyboardInterrupt:
 finally:
   print(pop.copy())
   print(min_fitness)
-  ax.plot(min_fitness, 'r')
-  ay.plot(max_fitness)
+  #ax.plot(min_fitness, 'r')
+  #ay.plot(max_fitness)
   az.plot(total_fitness)
   plt.show()
   

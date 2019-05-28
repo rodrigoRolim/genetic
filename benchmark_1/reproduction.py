@@ -4,7 +4,7 @@ import arithmetic_crossover
 
 class Reproduction:
   
-  _Pc = 0.7
+  _Pc = 0.6
   _Pm = 0.01
   def generate_random_numbers(self, n):
     randomNumbers = [] 
@@ -54,7 +54,7 @@ class Reproduction:
       cromossoma_copy_1 = cromossoma_1.copy()
       cromossoma_copy_2 = cromossoma_2.copy()
 
-      childs = arithmetic_crossover.crossover(cromossoma_copy_1, cromossoma_copy_2, 0.01)
+      childs = arithmetic_crossover.crossover(cromossoma_copy_1, cromossoma_copy_2, 0.1)
 
       newPopulation[engaged[0]] = childs[0]
       newPopulation[engaged[1]] = childs[1]
