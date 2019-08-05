@@ -1,3 +1,4 @@
+import math
 class Fitness:
   fitness = 0
   list_fitness = []
@@ -7,7 +8,7 @@ class Fitness:
       sm = 0
       for gene in cromossoma:
       
-        sm += abs(gene + 0.5)
+        sm += math.floor(gene + 0.5)
       
       self.fitness = sm
       self.list_fitness.append(self.fitness)
